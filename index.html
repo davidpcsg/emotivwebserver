@@ -1,0 +1,70 @@
+<html ng-app="app">
+<head>
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <title>EmotivInterface Webserver</title>
+</head>
+<body ng-controller="MainController">
+    <div class="content">
+      <img class="logo centered" src="img/ludes.png"/>
+      <div class="text-centered title">EmotivInterface</div>
+      <div class="panel">
+        <div class="panel-left">
+          <div class="panel-left-left">
+            <ul>
+              <li class="general-text">
+                A&ccedil;&atilde;o: <img ng-src="{{getActionLed(action_status.current_action)}}"></img>
+              </li>
+              <li class="general-text">
+                For&ccedil;a: <div class="progressbar"><div ng-style="powerbar_style"></div></div>
+              </li>
+              <li class="general-text">
+                Habilidade: {{skill}}%
+              </li>
+            </ul>
+          </div>
+          <div class="panel-left-right">
+            <ul>
+              <li class="general-text align-right">
+                Engagement: <div class="progressbar"><div ng-style="engagementbar_style"></div></div>
+              </li>
+              <li class="general-text align-right">
+                Frustration: <div class="progressbar"><div ng-style="frustrationbar_style"></div></div>
+              </li>
+              <li class="general-text align-right">
+                Relaxation:<div class="progressbar"><div ng-style="relaxationbar_style"></div></div>
+              </li>
+              <li class="general-text align-right">
+                Excitement: <div class="progressbar"><div ng-style="excitementbar_style"></div></div>
+              </li>
+              <li class="general-text align-right">
+                Interest: <div class="progressbar"><div ng-style="interestbar_style"></div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel-right">
+          <div class="panel-right-left">
+            <ul>
+              <li class="general-text">
+                Atividade: <img ng-src="{{getActiveLed(active)}}"></img>
+              </li>
+              <li class="sensor general-text">AF3: <img ng-src="{{getContactStatusLed(contact_status['AF3'])}}"></img></li>
+              <li class="sensor general-text">AF4: <img ng-src="{{getContactStatusLed(contact_status['AF4'])}}"></img></li>
+              <li class="sensor general-text">T7: <img ng-src="{{getContactStatusLed(contact_status['T7'])}}"></img></li>
+              <li class="sensor general-text">T8: <img ng-src="{{getContactStatusLed(contact_status['T8'])}}"></img></li>
+              <li class="sensor general-text">PZ: <img ng-src="{{getContactStatusLed(contact_status['PZ'])}}"></img></li>
+            </ul>
+          </div>
+          <div class="panel-right-right">
+            <div class="general-text text-centered">Posi&ccedil;&atilde;o dos Sensores</div>
+            <img src="img/insight_sensor_positions.png"></img>
+          </div>  
+        </div>
+      </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+<script src="js/maincontroller.js"></script>
+</body>
+</html>
+
+

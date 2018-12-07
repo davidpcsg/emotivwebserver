@@ -1,0 +1,151 @@
+.content{
+    width: 70%;
+    margin: auto;
+    border: solid #3474A1 2px;
+    border-radius: 10px;
+}
+
+.centered{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo{
+    padding: 40px 0;
+}
+
+.text-centered{
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Circo';
+    src:     url('circo_extended-Regular.otf') format('opentype');
+}
+
+.title{
+    font-family: Circo;
+    font-size: 32px;
+    font-weight: bold;
+    color: #3474A1;
+    padding: 40px 0;
+}
+
+.panel{
+    margin: 0;
+    width: 100%;
+}
+
+.panel::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.panel-left, .panel-right{
+    height: 300px;
+    width: 49%;
+    margin: 10px 0;
+}
+
+.panel li{
+    font-family: Circo;
+    list-style: none;
+}
+
+.panel-left-left li{
+    margin-bottom: 70px;
+}
+
+.panel-left-right li{
+    margin-bottom: 10px;
+}
+
+.panel-right li:first-child{
+    margin-bottom: 30px;
+}
+
+.panel-right li:not(:first-child){
+    margin-bottom: 10px;
+}
+
+.panel-right li img, .panel-left li img{
+    width: 16px;
+    height: 16px;
+}
+
+.panel-left{
+    float:left;
+}
+
+.panel-left-left{
+    float: left;
+    width: 42%;
+}
+
+.panel-left-right{
+    float: right;
+    padding: 0 10px;
+    width: 52%;
+}
+
+.panel-left-right ul{
+    padding: 10px;
+}
+
+.panel-left-left, .panel-left-right{
+    margin: 5px 0;
+    height: 290px;
+}
+
+.panel-right{
+    float: right;
+}
+
+.panel-right-left{
+    float: left;
+}
+
+.panel-right-right{
+    float: right;
+    padding: 0 10px;
+}
+
+.panel-right-left, .panel-right-right{
+    width: 45%;
+    margin: 5px;
+    height: 290px;
+}
+
+.panel-right-right img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.progressbar {
+    margin-left: 20px;
+    background-color: gray;
+    border-radius: 13px; /* (height of inner div) / 2 + padding */
+    padding: 3px;
+    display: inline-block;
+    width: 80px;
+}
+
+.progressbar > div {
+    background-color: orange;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.general-text{
+    font-family: Circo;
+    size: 28px;
+    font-weight: bold;
+    color: #3474A1;
+}
+
+.align-right{
+    text-align: right;
+}
